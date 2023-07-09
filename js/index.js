@@ -1,6 +1,6 @@
 function verificarContrasena() {
 
-    var contrasenaGuardada = "miContraseña123!";
+    var contrasenaGuardada = "admin";
     var contrasenaIngresada = document.getElementById("inputPass").value;
 
     if (contrasenaIngresada === contrasenaGuardada) {
