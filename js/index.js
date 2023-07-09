@@ -1,23 +1,27 @@
-function verificarContrasena() {
+function verificarUsuario() {
 
-    var contrasenaGuardada = "admin";
-    var contrasenaIngresada = document.getElementById("inputPass").value;
+    const usuarioGuardado = "user"
+    const contrasenaGuardada = "admin";
 
-    if (contrasenaIngresada === contrasenaGuardada) {
+    const usuarioIngresado = document.getElementById("inputUser").value;
+    const contrasenaIngresada = document.getElementById("inputPass").value;
+
+
+    if (contrasenaIngresada === contrasenaGuardada &&
+         usuarioGuardado === usuarioIngresado ) {
         return true;
     } else {
         return false;
     }
 }
 
-var loginButton = document.getElementById("loginButton");
-
-var loginButton = document.getElementById("loginButton");
+const loginButton = document.getElementById("loginButton");
 
 loginButton.addEventListener("click", function () {
-    if (verificarContrasena()) {
-        alert("Contraseña válida");
+    if (verificarUsuario()) {
+        alert("Usuario válido");
+        window.location.href="scndView.html"
     } else {
-        alert("Contraseña inválida");
+        alert("Usuario inválido");
     }   
 });
