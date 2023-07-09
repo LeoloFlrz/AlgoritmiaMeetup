@@ -1,32 +1,21 @@
-const inputUser = document.getElementById('inputUser');
-const inputPass = document.getElementById('inputPass');
-const loginButton = document.getElementById('loginButton');
-const userValidationContainer = document.getElementById('passValidation');
-const passValidationContainer = document.getElementById('passValidation')
-let userValidate = false;
-let passValidate = false;
+function verificarContrasena() {
 
-loginButton.disabled = true;
+    var contrasenaGuardada = "miContraseña123!";
+    var contrasenaIngresada = document.getElementById("inputPass").value;
 
-loginButton.addEventListener('click', () => {
-    let user = inputUser.textContent
-    let pass = inputPass.textContent
-
-    if (user.length > 0) {
-        userValidate = true;
+    if (contrasenaIngresada === contrasenaGuardada) {
+        return true;
     } else {
-        userValidationContainer.textContent = "Introduzca un usuario válido"
+        return false;
     }
+}
 
-    if (pass.length > 0) {
-        passValidate = true;
-    } else {
-        passValidationContainer.textContent = "Introduzca una contraseña válida"
-    }
+var loginButton = document.getElementById("loginButton");
 
-    if (userValidate === true && passValidate === true) {
-        loginButton.disabled = false;
+loginButton.addEventListener("click", function () {
+    if (verificarContrasena()) {
+        alert("Contraseña válida");
     } else {
-        alert('Rellene los campos correctamente')
-    }
-})
+        alert("Contraseña inválida");
+    }   
+});
