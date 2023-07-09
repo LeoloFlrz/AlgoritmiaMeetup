@@ -12,6 +12,8 @@ function verificarContrasena() {
 
 var loginButton = document.getElementById("loginButton");
 
+var loginButton = document.getElementById("loginButton");
+
 loginButton.addEventListener("click", function () {
     if (verificarContrasena()) {
         alert("Contraseña válida");
