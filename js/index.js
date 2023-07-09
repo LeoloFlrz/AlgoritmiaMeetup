@@ -26,6 +26,7 @@ loginButton.addEventListener('click', () => {
 
     if (userValidate === true && passValidate === true) {
         loginButton.disabled = false;
+        window.location='scndView.html'
     } else {
         alert('Rellene los campos correctamente')
     }
