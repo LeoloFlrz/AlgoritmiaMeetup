@@ -1,7 +1,7 @@
-function verificarUsuario() {
+function verificarUsuario() {  //TODO Naming english
 
     const usuarioGuardado = "user"
-    const contrasenaGuardada = "admin";
+    const contrasenaGuardada = "admin"; //TODO notación sobre db
 
     const usuarioIngresado = document.getElementById("inputUser").value;
     const contrasenaIngresada = document.getElementById("inputPass").value;
@@ -25,3 +25,5 @@ loginButton.addEventListener("click", function () {
         alert("Usuario inválido");
     }   
 });
+
+//TODO ensayo error.
